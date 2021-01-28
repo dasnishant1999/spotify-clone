@@ -1,6 +1,8 @@
 import React from "react";
 
-function Player() {
+import "./Player.css";
+
+function Player({ spotify }) {
   return (
     <div>
       <h1>Welcome to spotify</h1>
