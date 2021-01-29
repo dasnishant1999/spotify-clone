@@ -1,4 +1,4 @@
-### This project is a spotify web clone made using react and spotify-web-api
+### This project is a spotify web clone made using react and spotify-web-api, material UI
 
 # Getting Started with Create React App
 

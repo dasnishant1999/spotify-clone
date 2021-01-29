@@ -10,7 +10,7 @@ export const initialState = {
 
 const reducer = (state, action) => {
   //action type   payload   this is in dispatch function
-  console.log(action);
+  // console.log(action);
   switch (action.type) {
     case "SET_TOKEN":
       return {
@@ -21,6 +21,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         user: action.user,
+      };
+
+    case "SET_PLAYLISTS":
+      return {
+        ...state,
+        playlists: action.playlists,
       };
 
     default:

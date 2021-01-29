@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import SpotifyWebApi from "spotify-web-api-js";
 
@@ -12,7 +12,7 @@ const spotify = new SpotifyWebApi();
 
 function App() {
   // const [token, settoken] = useState(null);
-  const [{ user, token }, dispatch] = useDataLayerValue();
+  const [{ token }, dispatch] = useDataLayerValue();
 
   useEffect(() => {
     const hash = getTokenUrl();
@@ -32,10 +32,16 @@ function App() {
           user: user,
         });
       });
+
+      spotify.getUserPlaylists().then((playlists) => {
+        // console.log(playlists);
+        dispatch({
+          type: "SET_PLAYLISTS",
+          playlists: playlists,
+        });
+      });
     }
   }, []);
-
-  console.log(token);
 
   return (
     <>
