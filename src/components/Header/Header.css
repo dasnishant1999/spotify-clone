@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: 30px; */
+}
+
+/* this is for search box */
+.header_left {
+  flex: 0.35;
+  background-color: white;
+  color: gray;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  padding: 0px 10px;
+}
+
+.header_left > input {
+  border: none;
+  width: 100%;
+}
+.header_left > input:focus {
+  outline: none;
+}
+
+/* this is for avatar */
+.header_right {
+  cursor: pointer;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.header_right:hover {
+  background-color: #1f2937;
+}
+
+.header_right > h4 {
+  margin: 0px 10px;
+}

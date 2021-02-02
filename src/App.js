@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import SpotifyWebApi from "spotify-web-api-js";
 
 import "./App.css";
-import Login from "./components/Login";
+import Login from "./components/Login/Login";
 import Player from "./components/Player";
 import { useDataLayerValue } from "./provider/DataLayer";
 import { getTokenUrl } from "./services/spotify";
