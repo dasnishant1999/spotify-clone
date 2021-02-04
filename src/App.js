@@ -12,7 +12,7 @@ const spotify = new SpotifyWebApi();
 
 function App() {
   // const [token, settoken] = useState(null);
-  const [{ token }, dispatch] = useDataLayerValue();
+  const [{ playlist, token }, dispatch] = useDataLayerValue();
 
   useEffect(() => {
     const hash = getTokenUrl();
@@ -40,8 +40,16 @@ function App() {
           playlists: playlists,
         });
       });
+
+      spotify.getPlaylist("3KGcxceXs3pNhq5WJW0HyE").then((response) => {
+        dispatch({
+          type: "SET_PLAYLIST",
+          playlist: response,
+        });
+      });
     }
   }, []);
+  console.log(playlist);
 
   return (
     <>
