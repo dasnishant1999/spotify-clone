@@ -13,7 +13,7 @@ function Body({ spotify }) {
 
   return (
     <div className="body">
-      <Header spotify={spotify} />
+      {/* <Header spotify={spotify} /> */}
 
       <div className="body_info">
         <img src={playlist?.images[0].url} alt="" />
@@ -24,6 +24,7 @@ function Body({ spotify }) {
           <h5>{user?.display_name}</h5>
         </div>
       </div>
+
       <div className="body_songs">
         <div className="body_icons">
           <PlayCircleFilledIcon className="body_play" />

@@ -1,0 +1,10 @@
+.genre {
+  height: 190px;
+  border-radius: 10px;
+  /* width: 185px; */
+  /* background: linear-gradient(370deg, #D97706, #92400E); */
+}
+
+.genre > h2 {
+  padding: 15px 15px;
+}

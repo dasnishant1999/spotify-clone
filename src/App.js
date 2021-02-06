@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
 import SpotifyWebApi from "spotify-web-api-js";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./App.css";
 import Login from "./components/Login/Login";
@@ -53,9 +54,13 @@ function App() {
 
   return (
     <>
-      <div className="app">
-        {token ? <Player spotify={spotify} /> : <Login />}
-      </div>
+      <Router>
+        <Switch>
+          <div className="app">
+            {token ? <Player spotify={spotify} /> : <Login />}
+          </div>
+        </Switch>
+      </Router>
     </>
   );
 }

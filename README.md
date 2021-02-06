@@ -1,5 +1,13 @@
 ### This project is a spotify web clone made using react and spotify-web-api, material UI
 
+#### To-Do
+
+1. Search
+2. Your Library
+3. Home
+4. Each playlist page
+5. Song playing functionality(for later)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

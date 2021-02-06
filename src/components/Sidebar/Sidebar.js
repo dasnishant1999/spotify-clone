@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 import LibraryMusicRoundedIcon from "@material-ui/icons/LibraryMusicRounded";
@@ -17,9 +19,15 @@ function Sidebar() {
         src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg"
         alt="spotify logo "
       />
-      <SiderbarOption text="Home" Icon={HomeRoundedIcon} />
-      <SiderbarOption text="Search" Icon={SearchRoundedIcon} />
-      <SiderbarOption text="Your Library" Icon={LibraryMusicRoundedIcon} />
+      <Link to="/">
+        <SiderbarOption text="Home" Icon={HomeRoundedIcon} />
+      </Link>
+      <Link to="/search">
+        <SiderbarOption text="Search" Icon={SearchRoundedIcon} />
+      </Link>
+      <Link to="/collection">
+        <SiderbarOption text="Your Library" Icon={LibraryMusicRoundedIcon} />
+      </Link>
       <br />
       <strong className="sidebar_title">PLAYLISTS</strong>
       <hr />

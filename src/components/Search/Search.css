@@ -1,0 +1,20 @@
+.search {
+  height: 100vh;
+  /* width: 80%; */
+  flex: 0.8;
+  padding: 10px 30px 100px 30px;
+  background: linear-gradient(rgba(91, 87, 115), rgba(0, 0, 0, 1));
+  color: white;
+  overflow-y: overlay;
+}
+
+.search::-webkit-scrollbar {
+  display: none;
+}
+
+.search_genre {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1.65em;
+  grid-row-gap: 1.65em;
+}
