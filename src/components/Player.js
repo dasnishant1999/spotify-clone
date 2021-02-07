@@ -1,12 +1,13 @@
 import React from "react";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 import "./Player.css";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Body from "./Body/Body";
 import Footer from "./Footer/Footer";
 import Search from "./Search/Search";
+import Collection from "./Collection/Collection";
 
 function Player({ spotify }) {
   return (
@@ -20,7 +21,7 @@ function Player({ spotify }) {
           <Search spotify={spotify} />
         </Route>
         <Route path="/collection">
-          <h2>Your library</h2>
+          <Collection spotify={spotify} />
         </Route>
         <Route
           path="/playlist/:id"

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import SpotifyWebApi from "spotify-web-api-js";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
 
 import "./App.css";
 import Login from "./components/Login/Login";
@@ -13,7 +13,7 @@ const spotify = new SpotifyWebApi();
 
 function App() {
   // const [token, settoken] = useState(null);
-  const [{ playlists, playlist, token }, dispatch] = useDataLayerValue();
+  const [{ artists, token }, dispatch] = useDataLayerValue();
 
   useEffect(() => {
     const hash = getTokenUrl();
@@ -39,16 +39,16 @@ function App() {
         });
       });
 
-      // spotify.getPlaylist("3KGcxceXs3pNhq5WJW0HyE").then((response) => {
-      //   dispatch({
-      //     type: "SET_PLAYLIST",
-      //     playlist: response,
-      //   });
-      // });
+      spotify.getFollowedArtists().then((artists) => {
+        dispatch({
+          type: "SET_ARTISTS",
+          artists: artists,
+        });
+      });
     }
   }, []);
-  console.log(playlists);
-  console.log(playlist);
+
+  console.log(artists);
 
   return (
     <>

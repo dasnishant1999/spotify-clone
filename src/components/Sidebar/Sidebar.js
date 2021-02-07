@@ -17,7 +17,7 @@ function Sidebar() {
       <img
         className="sidebar_logo"
         src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg"
-        alt="spotify logo "
+        alt="spotify logo"
       />
       <Link to="/" style={{ textDecoration: "none" }}>
         <SiderbarOption text="Home" Icon={HomeRoundedIcon} />
@@ -35,6 +35,7 @@ function Sidebar() {
       <div className="sidebar_playlist">
         {playlists?.items?.map((playlist) => (
           <Link
+            key={playlist.id}
             to={`/playlist/${playlist.id}`}
             style={{ textDecoration: "none" }}
           >
