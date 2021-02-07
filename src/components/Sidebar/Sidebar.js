@@ -19,13 +19,13 @@ function Sidebar() {
         src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg"
         alt="spotify logo "
       />
-      <Link to="/">
+      <Link to="/" style={{ textDecoration: "none" }}>
         <SiderbarOption text="Home" Icon={HomeRoundedIcon} />
       </Link>
-      <Link to="/search">
+      <Link to="/search" style={{ textDecoration: "none" }}>
         <SiderbarOption text="Search" Icon={SearchRoundedIcon} />
       </Link>
-      <Link to="/collection">
+      <Link to="/collection" style={{ textDecoration: "none" }}>
         <SiderbarOption text="Your Library" Icon={LibraryMusicRoundedIcon} />
       </Link>
       <br />
@@ -34,7 +34,12 @@ function Sidebar() {
 
       <div className="sidebar_playlist">
         {playlists?.items?.map((playlist) => (
-          <SiderbarOption text={playlist.name}></SiderbarOption>
+          <Link
+            to={`/playlist/${playlist.id}`}
+            style={{ textDecoration: "none" }}
+          >
+            <SiderbarOption text={playlist.name}></SiderbarOption>
+          </Link>
         ))}
       </div>
     </div>

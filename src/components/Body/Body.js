@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
@@ -10,10 +11,23 @@ import { useDataLayerValue } from "../../provider/DataLayer";
 
 function Body({ spotify }) {
   const [{ playlist, user }, dispatch] = useDataLayerValue();
+  // console.log(useParams());
+  // console.log(useParams().id);
+  var id = useParams().id;
+
+  useEffect(() => {
+    spotify.getPlaylist(id).then((response) => {
+      dispatch({
+        type: "SET_PLAYLIST",
+        playlist: response,
+      });
+    });
+    return () => {};
+  }, [id]);
 
   return (
     <div className="body">
-      {/* <Header spotify={spotify} /> */}
+      <Header spotify={spotify} search />
 
       <div className="body_info">
         <img src={playlist?.images[0].url} alt="" />

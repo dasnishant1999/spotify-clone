@@ -14,7 +14,7 @@ function Player({ spotify }) {
       <div className="player_body">
         <Sidebar></Sidebar>
         <Route exact path="/">
-          <Body spotify={spotify}></Body>
+          <h2>i am home</h2>
         </Route>
         <Route path="/search">
           <Search spotify={spotify} />
@@ -22,6 +22,10 @@ function Player({ spotify }) {
         <Route path="/collection">
           <h2>Your library</h2>
         </Route>
+        <Route
+          path="/playlist/:id"
+          children={<Body spotify={spotify}></Body>}
+        ></Route>
       </div>
       <Footer></Footer>
     </div>

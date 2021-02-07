@@ -5,18 +5,20 @@ import { Avatar } from "@material-ui/core";
 import "./Header.css";
 import { useDataLayerValue } from "../../provider/DataLayer";
 
-function Header({ spotify }) {
+function Header({ spotify, search }) {
   const [{ user }, dispatch] = useDataLayerValue();
   return (
     <div className="header">
       {/* this is search field */}
-      <div className="header_left">
-        <SearchIcon></SearchIcon>
-        <input
-          type="text"
-          placeholder="Search for Artist, Songs, or Podcasts"
-        />
-      </div>
+      {search && (
+        <div className="header_left">
+          <SearchIcon></SearchIcon>
+          <input
+            type="text"
+            placeholder="Search for Artist, Songs, or Podcasts"
+          />
+        </div>
+      )}
 
       <div className="header_right">
         <Avatar src={user?.images[0]?.url} alt={user?.display_name} />
