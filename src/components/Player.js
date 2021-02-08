@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import "./Player.css";
 import Sidebar from "../components/Sidebar/Sidebar";
@@ -14,19 +14,21 @@ function Player({ spotify }) {
     <div className="player">
       <div className="player_body">
         <Sidebar></Sidebar>
-        <Route exact path="/">
-          <h2>i am home</h2>
-        </Route>
-        <Route path="/search">
-          <Search spotify={spotify} />
-        </Route>
-        <Route path="/collection">
-          <Collection spotify={spotify} />
-        </Route>
-        <Route
-          path="/playlist/:id"
-          children={<Body spotify={spotify}></Body>}
-        ></Route>
+        <Switch>
+          <Route exact path="/">
+            <h2>i am home</h2>
+          </Route>
+          <Route path="/search">
+            <Search spotify={spotify} />
+          </Route>
+          <Route path="/collection">
+            <Collection spotify={spotify} />
+          </Route>
+          <Route
+            path="/playlist/:id"
+            children={<Body spotify={spotify}></Body>}
+          ></Route>
+        </Switch>
       </div>
       <Footer></Footer>
     </div>

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import SpotifyWebApi from "spotify-web-api-js";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import "./App.css";
 import Login from "./components/Login/Login";
@@ -46,18 +46,17 @@ function App() {
         });
       });
     }
-  }, []);
+  }, [dispatch]);
+  //dispatch dependency added
 
   console.log(artists);
 
   return (
     <>
       <Router>
-        <Switch>
-          <div className="app">
-            {token ? <Player spotify={spotify} /> : <Login />}
-          </div>
-        </Switch>
+        <div className="app">
+          {token ? <Player spotify={spotify} /> : <Login />}
+        </div>
       </Router>
     </>
   );

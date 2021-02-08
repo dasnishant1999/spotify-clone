@@ -11,7 +11,7 @@ import SiderbarOption from "./SiderbarOption";
 import { useDataLayerValue } from "../../provider/DataLayer";
 
 function Sidebar() {
-  const [{ playlists }, dispatch] = useDataLayerValue();
+  const [{ playlists }, ] = useDataLayerValue();
   return (
     <div className="sidebar">
       <img

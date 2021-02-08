@@ -19,7 +19,7 @@ function Footer() {
       <div className="footer_left">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfc3flBMkl_pokprRIPVzb3eIbH7SWFXnTaA&usqp=CAU"
-          alt="song image"
+          alt="song_image"
         />
         <div className="footer_song_info">
           <h4>Thinking out Loud</h4>

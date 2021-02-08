@@ -6,7 +6,7 @@ import "./Header.css";
 import { useDataLayerValue } from "../../provider/DataLayer";
 
 function Header({ spotify, search }) {
-  const [{ user }, dispatch] = useDataLayerValue();
+  const [{ user }, ] = useDataLayerValue();
   return (
     <div className="header">
       {/* this is search field */}

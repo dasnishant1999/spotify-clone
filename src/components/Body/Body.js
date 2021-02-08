@@ -23,7 +23,7 @@ function Body({ spotify }) {
       });
     });
     return () => {};
-  }, [id]);
+  }, [id,dispatch,spotify]);
 
   return (
     <div className="body">
@@ -45,7 +45,7 @@ function Body({ spotify }) {
           <MoreHorizIcon className="body_more_options" />
         </div>
         {playlist?.tracks.items.map((item) => (
-          <SongRow track={item.track} />
+          <SongRow track={item.track} key={item.id}/>
         ))}
       </div>
     </div>

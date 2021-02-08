@@ -11,7 +11,7 @@ function Search({ spotify }) {
       <Header spotify={spotify} search />
       <div className="search_genre">
         {genres.map((item) => {
-          return <Genre genre={item} />;
+          return <Genre genre={item} key={item.text}/>;
         })}
       </div>
     </div>
