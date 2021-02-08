@@ -15,6 +15,7 @@ const scopes = [
   "user-follow-read",
   "user-library-read",
   "user-read-recently-played",
+  "user-read-recently-played",
 ];
 
 export const getTokenUrl = () => {

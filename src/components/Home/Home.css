@@ -1,0 +1,47 @@
+.home {
+  height: 100vh;
+  /* width: 80%; */
+  flex: 0.8;
+  padding: 10px 30px 100px 30px;
+  background: linear-gradient(rgba(91, 87, 115), rgba(0, 0, 0, 1));
+  color: white;
+  overflow-y: overlay;
+}
+
+.home::-webkit-scrollbar {
+  display: none;
+}
+
+.home_recently_played {
+  margin: 20px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1.65em;
+  grid-row-gap: 1.65em;
+}
+
+.recentlyPlayedCard {
+  background-color: #27272a;
+  height: 210px;
+  border-radius: 5px;
+  padding: 16px 16px 20px 16px;
+}
+
+.recentlyPlayedCard::-webkit-scrollbar {
+  display: none;
+}
+
+.recentlyPlayedCard:hover {
+  cursor: pointer;
+  background-color: #3f3f46;
+}
+
+.recentlyPlayedCard > img {
+  /* border-radius: 75px; */
+  height: 150px;
+}
+
+.recentlyPlayedCard > h4 {
+  padding: 5px 0;
+}
+

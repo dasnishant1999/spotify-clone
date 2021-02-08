@@ -13,7 +13,7 @@ const spotify = new SpotifyWebApi();
 
 function App() {
   // const [token, settoken] = useState(null);
-  const [{ albums, token }, dispatch] = useDataLayerValue();
+  const [{ recentlyPlayed, token }, dispatch] = useDataLayerValue();
 
   useEffect(() => {
     const hash = getTokenUrl();
@@ -52,11 +52,18 @@ function App() {
           albums: albums,
         });
       });
+
+      spotify.getMyRecentlyPlayedTracks().then((recentlyPlayed) => {
+        dispatch({
+          type: "SET_RECENTLY_PLAYED",
+          recentlyPlayed: recentlyPlayed,
+        });
+      });
     }
   }, [dispatch]);
   //dispatch dependency added
 
-  console.log(albums);
+  console.log(recentlyPlayed);
 
   return (
     <>

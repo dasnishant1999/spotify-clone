@@ -8,6 +8,7 @@ import Body from "./Body/Body";
 import Footer from "./Footer/Footer";
 import Search from "./Search/Search";
 import Collection from "./Collection/Collection";
+import Home from "./Home/Home";
 
 function Player({ spotify }) {
   return (
@@ -16,7 +17,7 @@ function Player({ spotify }) {
         <Sidebar></Sidebar>
         <Switch>
           <Route exact path="/">
-            <h2>i am home</h2>
+            <Home/>
           </Route>
           <Route path="/search">
             <Search spotify={spotify} />

@@ -6,6 +6,7 @@ export const initialState = {
   playlists: [],
   artists: [],
   albums: [],
+  recentlyPlayed:[],
   playing: false, //not in use currently
   items: null, //not in use currently
 };
@@ -45,6 +46,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         albums: action.albums,
+      };
+
+    case "SET_RECENTLY_PLAYED":
+      return {
+        ...state,
+        recentlyPlayed: action.recentlyPlayed,
       };
 
     default:
