@@ -1,0 +1,24 @@
+.albumsCard {
+  background-color: #27272a;
+  height: 210px;
+  border-radius: 5px;
+  padding: 16px 16px 20px 16px;
+}
+
+.albumsCard::-webkit-scrollbar {
+  display: none;
+}
+
+.albumsCard:hover {
+  cursor: pointer;
+  background-color: #3f3f46;
+}
+
+.albumsCard > img {
+  border-radius: 75px;
+  height: 150px;
+}
+
+.albumsCard > h4 {
+  padding: 5px 0;
+}

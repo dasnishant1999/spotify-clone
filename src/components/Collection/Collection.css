@@ -20,7 +20,7 @@
   grid-row-gap: 1.65em;
 }
 
-.collection_podcasts {
+.collection_albums {
   margin: 20px 0px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;

@@ -13,7 +13,7 @@ const spotify = new SpotifyWebApi();
 
 function App() {
   // const [token, settoken] = useState(null);
-  const [{ artists, token }, dispatch] = useDataLayerValue();
+  const [{ albums, token }, dispatch] = useDataLayerValue();
 
   useEffect(() => {
     const hash = getTokenUrl();
@@ -45,11 +45,18 @@ function App() {
           artists: artists,
         });
       });
+
+      spotify.getMySavedAlbums().then((albums) => {
+        dispatch({
+          type: "SET_ALBUMS",
+          albums: albums,
+        });
+      });
     }
   }, [dispatch]);
   //dispatch dependency added
 
-  console.log(artists);
+  console.log(albums);
 
   return (
     <>

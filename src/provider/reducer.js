@@ -5,6 +5,7 @@ export const initialState = {
   user: null,
   playlists: [],
   artists: [],
+  albums: [],
   playing: false, //not in use currently
   items: null, //not in use currently
 };
@@ -38,6 +39,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         artists: action.artists,
+      };
+
+    case "SET_ALBUMS":
+      return {
+        ...state,
+        albums: action.albums,
       };
 
     default:
