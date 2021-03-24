@@ -2,11 +2,10 @@
 
 #### To-Do
 
-1. Search
-2. Your Library
-3. Home
-4. Each playlist page
-5. Song playing functionality(for later)
+1. Scrolling problem
+2. Header(remove search from other pages like home,library,etc.)
+3. Song playing functionality(for later)
+4. More to be addded...
 
 # Getting Started with Create React App
 
